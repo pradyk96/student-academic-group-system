@@ -1,24 +1,36 @@
-# Thesis notes — Day 1 (light reading)
+# Thesis Notes — Day 1 (Light Reading)
+**Date:** 23 November 2026  
+**Status:** Draft (Incomplete - pending full abstract review)  
+**Topic:** Human responses to AI-generated emotional content in brand communication  
 
-## Brüns & Meißner (2024), J. Retailing & Consumer Services
-People could not tell AI-generated brand content from human-made content.
-After AI origin was disclosed, they judged it more negatively.
+---
 
-## Kirk & Givi (2025), J. Business Research
-When people believe an emotional message was written by AI, loyalty and
-positive word of mouth drop. Weaker for factual messages and when AI only
-edits. Runs through perceived authenticity and moral disgust.
+## 1. Key Literature Scan
 
-## AI poetry detection study (2024), Scientific Reports
-Non-experts struggled to distinguish AI poetry, and rated it favourably.
-Neighbouring evidence — not advertising.
+### A. Brüns & Meißner (2024) — *Journal of Retailing and Consumer Services*
+*   **Core Finding:** Consumers could not distinguish AI-generated brand content from human-made content (unaided detection).
+*   **Disclosure Effect:** Once the AI origin was disclosed, participants judged the content more negatively.
+*   **Relevance:** Directly addresses both the *detection* and *authorship knowledge* gaps.
 
-## Article 50, EU AI Act — my own words (to complete)
-- Brand chatbot: ...
-- AI-generated ad image: ...
-- AI-written ad copy: ...
+### B. Kirk & Givi (2025) — *Journal of Business Research*
+*   **Core Finding:** Believing an emotional message was written by AI significantly reduces consumer loyalty and positive word-of-mouth.
+*   **Boundary Conditions:** The negative effect is weaker for factual messages and when AI is used only for editing (not full generation).
+*   **Mediators:** The effect operates through perceived authenticity and moral disgust.
 
-## Next
-- Read full abstracts properly
-- Check Kučinskas & Survilaitė (2025), Lithuanian authors — possible local contact
-- Do NOT exclude "emotion recognition" from searches (needed for facial-coding validity)
+### C. AI Poetry Detection Study (2024) — *Scientific Reports*
+*   **Core Finding:** Non-experts found it difficult to distinguish AI-generated poetry, yet rated it favourably.
+*   **Relevance:** Neighbouring evidence showing that detection and evaluation must be measured separately.
+
+---
+
+## 2. Regulatory Scan: Article 50 (EU AI Act)
+*To be completed in own words based on full text:*
+*   [ ] **Brand chatbot:** Obligation to inform users they are interacting with AI (with exceptions).
+*   [ ] **AI-generated ad image:** Obligation for machine-readable marking / visible disclosure for deepfakes.
+*   [ ] **AI-written ad copy:** Obligation for transparency, especially for public-interest text (with human editorial exception).
+
+---
+
+## 3. Action Items & Constraints
+*   **Local Contact:** Check Lithuanian authors Kučinskas & Survilaitė (2025) for local empirical context.
+*   **Search Constraint (Claude's Tip):** Do *not* exclude "emotion recognition" from database searches. This is needed for facial-coding validity studies in the methods chapter. Screen papers by reading rather than using blanket NOT filters.
