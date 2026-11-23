@@ -1,2 +1,2 @@
-# Student-academic-group-system
+# Student-Academic-Group-System
 Information system for VILNIUS TECH Student Academic Group
