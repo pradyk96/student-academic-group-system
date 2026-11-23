@@ -1,48 +1,80 @@
-Requirements List — Draft v0.1
-Prepared by: Pratyaksh Kumar | Coordinator: Tomas Jonušas
-Source: "Participant's yearly workflow" (v0.1) + internship assignment
+# Requirements List — Draft v0.1
+**Date:** 23 November 2026  
+**Prepared by:** Pratyaksh Kumar (Intern)  
+**Coordinator:** Tomas Jonušas  
+**Status:** Draft (Skeleton)  
+**Source:** *"Participant's yearly workflow"* (v0.1) & Internhip Assignment Brief  
 
-1. Record types
-| Record | Purpose | Key fields |
-|---|---|---|
-| Interest | Chosen field and starting curiosity | Field, description, languages, rhythm |
-| Field map | Shared overview of a research field | Origins, authors, sources, concepts, methods, findings, disagreements, open questions, search profile |
-| Question | Question shared with the group | Question, context, related sources, author |
-| Source | Bibliographic entry | Bibliographic data, DOI/link, access status, annotation |
-| Research idea | Planned study | Question, rationale, material, method, scope |
-| Meeting note | Record of a review meeting | Date, participants, agreed next step |
+---
 
-Every record also stores: origin (person/AI), review status, created and updated dates, links to related records.
+## 1. Record Types & Metadata Schema
+The system must support the following core record types. Every record must automatically capture standard metadata:
 
-2. Review status
-AI draft → proposed for review → reviewed and included.
-Disputed or outdated records return to review. AI never approves its own content.
+| Record Type | Purpose | Key Fields & Metadata |
+| :--- | :--- | :--- |
+| **Interest** | Participant's chosen academic field and starting curiosity. | Field name, short description, languages, rhythm, origin (person/AI), review status, created/updated dates. |
+| **Field Map** | Shared overview of a research field. | Sections (origins, authors, sources, concepts, methods, findings, disagreements, open questions), search profile, links to related records. |
+| **Question** | A question shared with the group for discussion. | Question text, context, related sources, author, review status, links. |
+| **Source** | Bibliographic entry in the group library. | Bibliographic data, DOI/link, access status, annotation, origin, review status. |
+| **Research Idea** | Participant's planned study proposal. | Question, rationale, material, method, scope, author, review status, chosen audience. |
+| **Meeting Note** | Short agreed record of a review meeting. | Date, participants, agreed next steps, links to related records. |
 
-3. Access levels
-| Level | Who sees it | Examples |
-|---|---|---|
-| Private | Author only | Working notes, question drafts |
-| Group | All members | Field maps, shared questions |
-| Chosen audience | Selected people | Research ideas, text drafts |
-| Public | Anyone | Nothing by default |
+*All records must support standard metadata: origin (person or AI), review status, creation/update timestamps, and bidirectional links to related records.*
 
-4. Library and copyright
-Bibliographic records kept separate from full-text files.
-Full texts of others' works only in private part. Public part holds references, links, own annotations.
+---
 
-5. AI agent tasks
-1. Draft an initial field map with verifiable references and marked gaps
-2. Build a search profile per field
-3. Run a monthly scan, add candidates to a review area, write a digest
-4. Suggest links between members' records, with a reason
-5. State whether it analysed full text, abstract, or bibliographic data only
+## 2. Review Workflow (Status Machine)
+The lifecycle of a record is controlled to ensure quality. The workflow is as follows:
 
-6. Design principles
-Content independent of tool · configuration over code · low maintenance ·
-iterate then fix · every decision documented with "how to change it" · bilingual (LT/EN)
+$$\text{AI Draft} \longrightarrow \text{Proposed for Review} \longrightarrow \text{Reviewed and Included}$$
 
-Open questions
-- [ ] How often should members update the system? (weekly / monthly / quarterly)
-- [ ] Database access: Scopus / Web of Science status
-- [ ] Final tool decision — deferred until the model is reviewed
-- [ ] Where do members' personal areas sit inside the whole?
+*   **Rule 1:** Disputed or outdated records must return to the review stage.
+*   **Rule 2:** The AI agent **never** approves its own content. Human coordinator validation is mandatory before publication.
+
+---
+
+## 3. Access Control Levels (ACLs)
+Content visibility must be strictly controlled based on the record's sensitivity:
+
+| Level | Visibility | Examples |
+| :--- | :--- | :--- |
+| **Private** | Author only. | Working notes, draft questions, personal logs. |
+| **Group** | All verified group members. | Shared field maps, group questions, meeting notes. |
+| **Chosen Audience** | Selected members designated by the author. | Draft research ideas, draft text chapters. |
+| **Public** | Anyone (external viewers). | Nothing by default; must be explicitly decided and approved case-by-case. |
+
+---
+
+## 4. Library & Copyright Rules
+*   **Separation of Concerns:** Bibliographic metadata must be stored separately from full-text files.
+*   **Private Storage:** Full-text files of others' works (copyrighted material) must be stored **only** in the private area of the creator or designated admin for internal use.
+*   **Public/Group View:** Public-facing and group-facing parts of the library must contain **only** references, links, and the group's own annotations. No raw copyrighted PDFs.
+
+---
+
+## 5. AI Agent Functional Requirements
+The AI agent is a core component of the system. Its mandatory functions are:
+1.  **Field Map Drafting:** Generate an initial field map draft from available sources, with verifiable references and explicitly marked knowledge gaps.
+2.  **Search Profile Generation:** Build a structured search profile per field, including keywords, synonyms, and logical combinations.
+3.  **Monthly Literature Scan:** Automatically run monthly scans, add new candidate sources to a review area, and write a structured digest per field.
+4.  **Link Suggestion:** Proactively suggest links between members' shared records, providing a short, explainable reason for each proposed link.
+5.  **Transparency Statement:** Explicitly state the level of analysis performed (full text, abstract, or bibliographic data only) for every generated output.
+
+---
+
+## 6. Core Design Principles
+The system architecture must adhere strictly to the following principles:
+1.  **Content Independence:** All content stored as plain text (Markdown with YAML frontmatter). The tool can be replaced; the content survives.
+2.  **Configuration over Code:** Prioritise templates and settings. Any custom code must be minimal, documented, and isolated.
+3.  **Low Maintenance:** After January, a member without IT training must be able to run, update, and maintain the system.
+4.  **Iterate, Then Fix:** Test each part in real use before standardising it.
+5.  **Documentation-Driven:** Every decision must be documented with a *"how to change it"* note.
+6.  **Bilingual Support:** Structure and templates must support both Lithuanian and English natively.
+
+---
+
+## 7. Open Questions & Next Steps
+*   [ ] Confirm the status of Scopus / Web of Science database access for the AI agent.
+*   [ ] Define the exact file naming conventions for records (e.g., `YYYY-MM-DD_Author_Title.md`).
+*   [ ] Define the sync frequency for members (weekly, monthly, or quarterly).
+*   [ ] Schedule 2–3 interviews with group members to validate these requirements.
