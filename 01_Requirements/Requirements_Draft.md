@@ -1,5 +1,5 @@
 # Requirements List — Draft v0.1
-Date: 24 November 2026
+Date: 28 November 2026
 Prepared by: Pratyaksh Kumar
 Coordinator: Tomas Jonušas
 
