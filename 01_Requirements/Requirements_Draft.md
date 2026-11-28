@@ -1,7 +1,8 @@
 # Requirements List — Draft v0.1
 Date: 28 November 2026
-Prepared by: Pratyaksh Kumar
-Coordinator: Tomas Jonušas
+-Prepared by: Pratyaksh Kumar
+-Coordinator: Tomas Jonušas
+-Source: Participant's yearly workflow (v0.1) + member interviews
 
 ## 1. Record Types
 | Record | Purpose | Key Fields |
@@ -12,6 +13,7 @@ Coordinator: Tomas Jonušas
 | Source | Bibliographic entry | Bibliographic data, DOI/link, access status, annotation |
 | Research idea | Planned study | Question, rationale, material, method, scope |
 | Meeting note | Record of review meeting | Date, participants, agreed next step |
+| AI-generated emotional content — Lithuanian student group
 
 Every record stores: origin (person/AI), review status, creation/update dates, links to related records.
 
